@@ -43,6 +43,6 @@ jobs:
    
       # Runs a postman collection
       - name: Run TestScript
-        run: newman run PostmanCollections/postman_backup.json
+        run: newman run Postman Collections/postman_backup.json
 
       
