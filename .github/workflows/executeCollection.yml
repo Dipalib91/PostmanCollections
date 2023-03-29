@@ -44,6 +44,6 @@ jobs:
        
       # Runs a postman collection
       - name: Run TestScript
-        run: newman run "Postman Collections/postman_backup.json" -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html 
+        run: newman run "Postman Collections/postman_backup.json" -r htmlextra --reporter-htmlextra-export testArtifact/htmlreport.html --reporter-htmlextra-darkTheme  > testArtifact/runreport1.html 
 
       
