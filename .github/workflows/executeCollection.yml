@@ -40,9 +40,13 @@ jobs:
          npm install -g newman
          npm install -g newman-reporter-slackreporter
          npm install -g newman-reporter-htmlextra
-   
+     # Make Directory to upload test report
+      - name: make directory to upload result
+         run:|
+               mkdir -p testRrsults
+       
       # Runs a postman collection
       - name: Run TestScript
-        run: newman run "Postman Collections/postman_backup.json"
+        run: newman run "Postman Collections/postman_backup.json" -r htmlextra --reporter-htmlextra-export testResults/htmlReport.html
 
       
